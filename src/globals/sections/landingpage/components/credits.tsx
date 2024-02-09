@@ -5,13 +5,13 @@ import { ColorsPallete } from "@/styles/colors";
 const CreditsFooter = () => {
   return (
     <Container>
-      <Typography variant="subtitle1">
+      <Typography variant="subtitle1" textAlign="center">
         Página desenvolvida por{" "}
-        <a href="https://sofx.vercel.app" target="_blank">
+        <Linked href="https://sofx.vercel.app" target="_blank">
           <b>SOFX - Soluções Digitais</b>
-        </a>
+        </Linked>
       </Typography>
-      <Typography variant="subtitle1">
+      <Typography variant="subtitle1" textAlign="center">
         2024© Todos Direitos Reservados!
       </Typography>
     </Container>
@@ -27,6 +27,11 @@ const Container = styled(Box)`
   justify-content: center;
   row-gap: 1rem;
   color: ${ColorsPallete.primary};
+`;
+const Linked = styled("a")`
+  :hover {
+    text-decoration-line: underline;
+  }
 `;
 
 export default CreditsFooter;

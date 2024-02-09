@@ -1,10 +1,10 @@
-import LandingPage from "@/globals/sections/landingpage";
-import { Typography } from "@mui/material";
 import Head from "next/head";
+import LandingPage from "@/globals/sections/landingpage";
+import { Box, Typography } from "@mui/material";
 
 export default function Application() {
   return (
-    <>
+    <Box position="relative">
       <Head>
         <title>Doutor Reparos | Consertos e Manutenções</title>
         <meta
@@ -17,6 +17,6 @@ export default function Application() {
       </Head>
 
       <LandingPage />
-    </>
+    </Box>
   );
 }

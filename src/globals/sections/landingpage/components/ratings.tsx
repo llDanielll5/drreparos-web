@@ -1,11 +1,19 @@
+//@ts-nocheck
 import React from "react";
-import { Box, Rating, Typography, styled } from "@mui/material";
+import { Avatar, Box, Paper, Rating, Typography, styled } from "@mui/material";
 import { ColorsPallete } from "@/styles/colors";
 import { ratingsMock } from "@/_mock/landingpage";
+import Carousel from "react-elastic-carousel";
 
 const Ratings = () => {
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+  ];
   return (
-    <>
+    <Box id={"ratings"}>
       <Container>
         <Typography
           variant="h4"
@@ -16,45 +24,69 @@ const Ratings = () => {
         >
           O que nossos clientes dizem
         </Typography>
+
+        <StyledCarousel
+          autoPlaySpeed={2000}
+          enableAutoPlay
+          breakPoints={breakPoints}
+        >
+          {ratingsMock.map((v, i) => (
+            <StyledPaper key={i}>
+              <RatingsImage src={v.userImage} />
+              <Typography variant="h6" textAlign="center">
+                {v.user}
+              </Typography>
+              <Typography variant="subtitle2" textAlign="center">
+                {v.text}
+              </Typography>
+              <Rating name="read-only" value={v.stars} readOnly />
+            </StyledPaper>
+          ))}
+        </StyledCarousel>
       </Container>
-      <MosaicContainer>
-        {ratingsMock.map((v, i) => (
-          <Box key={i}>
-            <Typography variant="h6" color={ColorsPallete.primary}>
-              {v.user}
-            </Typography>
-            <Typography variant="subtitle2" color={ColorsPallete.primary}>
-              {v.text}
-            </Typography>
-            <Rating name="read-only" value={v.stars} readOnly />
-          </Box>
-        ))}
-      </MosaicContainer>
-    </>
+    </Box>
   );
 };
 
 const Container = styled(Box)`
   background-color: ${ColorsPallete.primary};
   width: 100%;
-  z-index: 2;
+  z-index: 0;
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: min-content;
 `;
 
-const MosaicContainer = styled(Box)`
+const StyledCarousel = styled(Carousel)`
+  align-self: center;
+`;
+
+const RatingsImage = styled(Avatar)`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  z-index: 999;
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid white;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(150, 150, 150, 0.75);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(150, 150, 150, 0.75);
+  box-shadow: 0px 4px 4px 0px rgba(150, 150, 150, 0.75);
+`;
+
+const StyledPaper = styled(Paper)`
+  max-width: 100%;
+  margin: 2.5rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   align-items: center;
-  padding: 4rem 2rem;
-  column-gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #f4f4f4;
+  flex-direction: column;
   row-gap: 1rem;
-  @media screen and (max-width: 1080px) {
-  }
+  position: relative;
+  max-width: 200px;
 `;
 
 export default Ratings;

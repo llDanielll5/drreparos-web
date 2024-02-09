@@ -10,12 +10,12 @@ import CreditsFooter from "./components/credits";
 
 const LandingPage = () => {
   return (
-    <Box>
+    <Box position="relative">
       <HeaderNavigation />
       <Banner />
       <Services />
-      <Ratings />
       <Differences />
+      <Ratings />
       <Footer />
       <CreditsFooter />
     </Box>

@@ -1,16 +1,23 @@
 import React from "react";
 import { Box, Typography, styled } from "@mui/material";
 
-const MiniCardBanner = (props: { text: string; hasReverse?: boolean }) => {
+const MiniCardBanner = (props: {
+  text: string;
+  hasReverse?: boolean;
+  textHeight: any;
+}) => {
   return (
     <Box
       display={"flex"}
       flexDirection={props.hasReverse ? "row-reverse" : "row"}
       width={"100%"}
       alignItems={"center"}
+      justifyContent="center"
     >
       <MiniCard>
-        <Typography variant="h4">{props.text}</Typography>
+        <Typography variant={props.textHeight} textAlign="center">
+          {props.text}
+        </Typography>
       </MiniCard>
     </Box>
   );
