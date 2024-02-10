@@ -6,6 +6,7 @@ import { ColorsPallete } from "@/styles/colors";
 import { servicesMock } from "@/_mock/services";
 import Footer from "@/globals/sections/landingpage/components/footer";
 import CreditsFooter from "@/globals/sections/landingpage/components/credits";
+import Head from "next/head";
 
 const ServicesPage = () => {
   const router = useRouter();
@@ -15,6 +16,9 @@ const ServicesPage = () => {
   };
   return (
     <Box>
+      <Head>
+        <title>Serviços Dr. Reparos - Todos Serviços</title>
+      </Head>
       <HeaderNavigation />
       <Box>
         <Typography

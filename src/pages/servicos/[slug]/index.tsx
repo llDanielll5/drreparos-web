@@ -9,6 +9,7 @@ import Footer from "@/globals/sections/landingpage/components/footer";
 import CreditsFooter from "@/globals/sections/landingpage/components/credits";
 import Carousel from "react-elastic-carousel";
 import { whatsappNumber } from "@/globals/sections/landingpage/components/card-services";
+import Head from "next/head";
 
 interface ServiceInterface {
   img: string;
@@ -51,6 +52,9 @@ const ServicesDetailsPage = () => {
 
   return (
     <Box>
+      <Head>
+        <title>Serviço de {serviceDetails?.title} Dr. Reparos</title>
+      </Head>
       <HeaderNavigation />
       <Box>
         <Typography
