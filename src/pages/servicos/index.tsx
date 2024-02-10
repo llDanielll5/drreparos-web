@@ -11,7 +11,7 @@ const ServicesPage = () => {
   const router = useRouter();
 
   const handleGetSingleService = (slug: string) => {
-    router.push(`/services/${slug}`);
+    router.push(`/servicos/${slug}`);
   };
   return (
     <Box>

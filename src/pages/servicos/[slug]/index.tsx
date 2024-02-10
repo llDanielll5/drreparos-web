@@ -50,7 +50,11 @@ const ServicesDetailsPage = () => {
           {serviceDetails?.title}
         </Typography>
 
-        <StyledCarousel breakPoints={breakPoints}>
+        <StyledCarousel
+          breakPoints={breakPoints}
+          showArrows={false}
+          itemPadding={[3]}
+        >
           {serviceDetails?.images?.map((v, i) => (
             <StyledImage src={v} key={i} />
           ))}
@@ -125,7 +129,8 @@ const StyledImage = styled("img")`
   }
   @media screen and (max-width: 550px) {
     width: 100%;
-    min-height: 400px;
+    min-height: 250px;
+    max-height: 250px;
     min-width: 300px;
   }
 `;
