@@ -142,7 +142,7 @@ export const servicesMock = [
     slug: "carpintaria",
     icon: "",
     services: [
-      "Instalação/assentamento, manutenção e ajuste em porta e alisar.",
+      "Instalação, Assentamento, Manutenção e Ajuste em Porta e Alisar.",
       "Instalação de fechadura e maçaneta",
     ],
     images: [

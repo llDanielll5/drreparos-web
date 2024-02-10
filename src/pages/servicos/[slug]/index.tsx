@@ -8,6 +8,7 @@ import { ColorsPallete } from "@/styles/colors";
 import Footer from "@/globals/sections/landingpage/components/footer";
 import CreditsFooter from "@/globals/sections/landingpage/components/credits";
 import Carousel from "react-elastic-carousel";
+import { whatsappNumber } from "@/globals/sections/landingpage/components/card-services";
 
 interface ServiceInterface {
   img: string;
@@ -22,10 +23,20 @@ interface ServiceInterface {
 const ServicesDetailsPage = () => {
   const router = useRouter();
   let routerName = router.query?.slug;
+  const breakPoints = [{ width: 1, itemsToShow: 1 }];
   const [serviceDetails, setServiceDetails] = useState<ServiceInterface | null>(
     null
   );
-  const breakPoints = [{ width: 1, itemsToShow: 1 }];
+
+  const msg = `Olá!!
+  Gostaria de receber mais informações pelo serviço de ${serviceDetails?.title} do Dr Reparos!
+
+  Poderia me informar mais?
+  `;
+  const zapHref = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
+    msg
+  )}`;
+  const handleOpenZap = () => window.open(zapHref, "_blank");
 
   const getServicesDetails = () => {
     let filter: any = servicesMock.find((e) => e.slug === routerName);
@@ -105,9 +116,11 @@ const ServicesDetailsPage = () => {
         sx={{ backgroundColor: ColorsPallete.primary }}
       >
         <Typography variant="h5" textAlign="center" color={"white"} pb={2}>
-          Gostaria de receber um orçamento Gratuito?
+          Solicite o Serviço Desejado!
         </Typography>
-        <Button variant="contained">Receber Orçamento!</Button>
+        <Button variant="contained" onClick={handleOpenZap}>
+          Solicitar Orçamento!
+        </Button>
       </Box>
 
       <Footer />

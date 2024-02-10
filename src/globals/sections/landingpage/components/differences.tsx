@@ -52,7 +52,7 @@ const Differences = () => {
         />
         <CardDifferences
           icon={<ShieldIcon style={{ fontSize: 100, color: "#5F1CED" }} />}
-          title="Garantia Prolongada!"
+          title="Serviços com Garantia!"
           color="#5F1CED"
         />
         <CardDifferences
