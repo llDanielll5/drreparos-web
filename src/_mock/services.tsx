@@ -14,7 +14,7 @@ export const servicesMock = [
       "IDR / DR",
       "Dimer",
       "Campainha",
-      "Chuveiro (instalação/troca), troca de resistência, fiação.",
+      "Chuveiro (Instalação e Troca), troca de resistência, fiação.",
       "Lâmpada, luminária, croica, LED, barra de LED, lustres, arandelas, abajur.",
       "Fiação (adequação e troca)",
       "Fiação para TV/rede",
@@ -32,7 +32,7 @@ export const servicesMock = [
     slug: "hidraulica",
     icon: "",
     services: [
-      "Registro (instalação/manutenção/vazamento/troca)",
+      "Registro (Instalação, Manutenção, Vazamento, Troca)",
       "Chuveiro - instalação",
       "Pia/lavatório (troca de válvula, sifão, vedação com.silicone ou PU, tira vazamento)",
       "Torneira (instalação, troca de reparo, tira vazamento)",

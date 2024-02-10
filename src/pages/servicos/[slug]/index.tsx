@@ -83,10 +83,11 @@ const ServicesDetailsPage = () => {
               }}
             >
               <Typography
+                p={2}
                 variant="h6"
                 color={ColorsPallete.primary}
                 textAlign="center"
-                p={2}
+                lineHeight={"1.4rem"}
               >
                 · {v}
               </Typography>
