@@ -5,7 +5,7 @@ import MiniCardBanner from "./mini-card";
 import { whatsappNumber } from "./card-services";
 
 const Banner = () => {
-  const msg = `Olá!! Gostaria de saber mais sobre a o Doutor Reparos!`;
+  const msg = `Olá!! Gostaria de saber mais sobre os serviços do Doutor Reparos!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
     msg
   )}`;

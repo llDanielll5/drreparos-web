@@ -9,7 +9,7 @@ const Ratings = () => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
+    { width: 780, itemsToShow: 3 },
     { width: 1200, itemsToShow: 4 },
   ];
   return (
@@ -78,7 +78,6 @@ const RatingsImage = styled(Avatar)`
 `;
 
 const StyledPaper = styled(Paper)`
-  max-width: 100%;
   margin: 2.5rem 1rem;
   padding: 3rem 1rem;
   display: flex;
@@ -86,7 +85,7 @@ const StyledPaper = styled(Paper)`
   flex-direction: column;
   row-gap: 1rem;
   position: relative;
-  max-width: 200px;
+  max-width: 280px;
 `;
 
 export default Ratings;

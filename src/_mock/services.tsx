@@ -186,7 +186,7 @@ export const servicesMock = [
     subtitle: "Fabricação e Reformas de Móveis de Fibra Sintética",
     slug: "moveis",
     icon: "",
-    services: ["Montagem", "Desmontagem"],
+    services: ["Montagem", "Desmontagem", "Consertos e Ajustes"],
     images: [
       "https://fellizardo.com.br/wp-content/uploads/2020/09/Montador-de-moveis-santo-andre.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ867spu48PmDyqrZNgEE-VRQzCGXBmr_KInt-96sXRJlYrcFqR33Y_qcl_BRinDHhy80&usqp=CAU",
@@ -204,6 +204,18 @@ export const servicesMock = [
       "https://www.shutterstock.com/image-photo/inside-removal-van-showing-fabric-600nw-2272242425.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzFeTWEtWaTXGaVU1ENjJWPFasqPYk5kgPfw&usqp=CAU",
       "https://infinityimobiliaria.com.br/wp-content/uploads/2022/02/mudanca-de-casa_blog.jpg",
+    ],
+  },
+  {
+    img: "https://down-br.img.susercontent.com/file/b83fd09c79d546df7c7f44c1718211d2",
+    title: "Moldura Boiserie",
+    subtitle: "Fabricação e Reformas de Móveis de Fibra Sintética",
+    slug: "moldura-bolserie",
+    icon: "",
+    services: ["Instalação", "Manutenção"],
+    images: [
+      "https://down-br.img.susercontent.com/file/b83fd09c79d546df7c7f44c1718211d2",
+      "https://montante.com.br/wp-content/uploads/2019/04/20190412_165804.jpg",
     ],
   },
 ];

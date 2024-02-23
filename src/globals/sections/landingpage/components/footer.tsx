@@ -5,8 +5,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
-  const facebookUrl = "https://facebook.com";
-  const instagramUrl = "https://instagram.com";
+  const facebookUrl =
+    "https://www.facebook.com/profile.php?id=61556356902233&mibextid=ZbWKwL";
+  const instagramUrl = "https://www.instagram.com/doutor.reparos/";
 
   const openFacebook = () => window.open(facebookUrl, "_blank");
   const openInstagram = () => window.open(instagramUrl, "_blank");
@@ -39,7 +40,7 @@ const Footer = () => {
             Gostou dos nossos serviços? Solicite um orçamento!
           </Typography>
           <Typography variant="subtitle1">
-            <b>(62) 9 9278-4628 </b>
+            <b>(61) 9 9196-7884</b> <br /> <b>(62) 9 9278-4628 </b>
           </Typography>
         </Box>
       </InnerContainer>
