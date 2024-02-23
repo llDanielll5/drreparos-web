@@ -38,17 +38,17 @@ const StyledText = styled(Typography)`
   @media screen and (max-width: 760px) {
     height: 2rem;
     width: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   @media screen and (max-width: 580px) {
-    height: 1.8rem;
-    width: 1.8rem;
-    font-size: 0.8rem;
+    height: 2.3rem;
+    width: 2.3rem;
+    font-size: 1.4rem;
   }
-  @media screen and (max-width: 450px) {
-    height: 1.6rem;
-    width: 1.6rem;
-    font-size: 0.8rem;
+  @media screen and (max-width: 500px) {
+    height: 1.9rem;
+    width: 1.9rem;
+    font-size: 1.2rem;
   }
 `;
 

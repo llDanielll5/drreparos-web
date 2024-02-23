@@ -25,18 +25,17 @@ const Ratings = () => {
           O que nossos clientes dizem
         </Typography>
 
-        <StyledCarousel
-          autoPlaySpeed={2000}
-          enableAutoPlay
-          breakPoints={breakPoints}
-        >
+        <StyledCarousel breakPoints={breakPoints}>
           {ratingsMock.map((v, i) => (
             <StyledPaper key={i}>
               <RatingsImage src={v.userImage} />
               <Typography variant="h6" textAlign="center">
                 {v.user}
               </Typography>
-              <Typography variant="subtitle2" textAlign="center">
+              <Typography variant="caption" fontWeight="bold" my={1}>
+                {v.city}
+              </Typography>
+              <Typography variant="subtitle2" textAlign="center" mb={1}>
                 {v.text}
               </Typography>
               <Rating name="read-only" value={v.stars} readOnly />
@@ -83,7 +82,6 @@ const StyledPaper = styled(Paper)`
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 1rem;
   position: relative;
   max-width: 280px;
 `;
