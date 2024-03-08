@@ -53,7 +53,7 @@ const ServicesDetailsPage = () => {
   return (
     <Box>
       <Head>
-        <title>Serviço de {serviceDetails?.title} Dr. Reparos</title>
+        <title>Serviço de {serviceDetails?.title} Doutor Reparos</title>
       </Head>
       <HeaderNavigation />
       <Box>
